@@ -1,5 +1,5 @@
 import io import os import random import requests from datetime import datetime from reportlab.lib.pagesizes import A5 from reportlab.pdfgen import canvas from reportlab.pdfbase import pdfmetrics from reportlab.pdfbase.ttfonts import TTFont from telegram import Update from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-TOKEN = os.environ.get("TELEGRAM_TOKEN") PORT = int(os.environ.get("PORT", 8080)) WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
+TOKEN = os.environ.get("8748775050:AAFHcDI6JlYGmCKTiIoUe17fKGOG80KsaXA") PORT = int(os.environ.get("PORT", 8080)) WEBHOOK_URL = os.environ.get("WEBHOOK_URL")
 FONT_NAME = "DejaVuSans" FONT_FILE = f"{FONT_NAME}.ttf"
 if not os.path.exists(FONT_FILE): print("Downloading font...") url = "https://github.com/dejavu-fonts/dejavu-fonts/raw/master/ttf/DejaVuSans.ttf" response = requests.get(url) with open(FONT_FILE, "wb") as f: f.write(response.content) print("Font downloaded")
 pdfmetrics.registerFont(TTFont(FONT_NAME, FONT_FILE))
